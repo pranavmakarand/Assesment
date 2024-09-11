@@ -63,11 +63,11 @@ public class Console {
 			logFormatStrategy = new CustomLogFormatStrategy();
 		}
 
-//		String lookupTablePath = Paths.get(options.getLookupTableFilePath()).toString();
-//		String flowLogPath = Paths.get(options.getFlowLogsFilePath()).toString();
+		String lookupTablePath = Paths.get(options.getLookupTableFilePath()).toString();
+		String flowLogPath = Paths.get(options.getFlowLogsFilePath()).toString();
 		
-		String lookupTablePath = Paths.get("resources/lookup_table.csv").toString();
-		String flowLogPath = Paths.get("resources/flow_log.txt").toString();
+//		String lookupTablePath = Paths.get("resources/lookup_table.csv").toString();
+//		String flowLogPath = Paths.get("resources/flow_log.txt").toString();
 
 		FlowLogUtility tagger = new FlowLogUtility(logFormatStrategy);
 
@@ -99,8 +99,8 @@ public class Console {
 
 		try {
 
-			tagger.generateOutputs("resources/output.txt");
-//			tagger.generateOutputs(options.getOutputFilePath());
+//			tagger.generateOutputs("resources/output.txt");
+			tagger.generateOutputs(options.getOutputFilePath());
 
 		} catch (IOException e) {
 			
